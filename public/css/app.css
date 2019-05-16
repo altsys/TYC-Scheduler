@@ -29565,3 +29565,7 @@ readers do not read off random characters that represent icons */
   flex-direction: row;
 }
 
+.sidebar-dark-primary {
+  background-color: #e8f3ff !important;
+}
+

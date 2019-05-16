@@ -1,0 +1,56 @@
+Event
+-- id
+-- name
+-- description
+-- type
+-- -- -- Exam, Class, Lecture, Meeting, Conference
+-- Frequency
+-- Priority
+-- status
+
+Event_Venue
+-- event_id
+-- venue_id
+-- starts_at
+-- ends_at
+-- participants_count
+-- 
+
+Venue
+-- id
+-- code/name
+-- capacity
+-- description
+-- location
+
+Venue_Features
+-- venue_id
+-- feature_id
+
+Features
+-- id
+-- name
+-- description
+
+
+
+
+People
+-- id
+-- first_name
+-- middle_name
+-- last_name
+-- dob
+-- sex
+-- 
+
+Organizer
+-- id
+-- person_id
+-- organizer_role (Speaker, Facilitator, Examiner, Vigilant, )
+-- 
+
+Participants
+-- id
+-- person_id
+-- 
