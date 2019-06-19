@@ -178,9 +178,9 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <router-link to="/exams" class="nav-link active">
+                                    <router-link to="/events" class="nav-link">
                                         <i class="fa fa-circle-o nav-icon"></i>
-                                        <p>Exams</p>
+                                        <p>All Events</p>
                                     </router-link>
                                 </li>
                                 <li class="nav-item">
@@ -207,21 +207,15 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">
+                                    <router-link to="/venues" class="nav-link">
                                         <i class="fa fa-circle-o nav-icon"></i>
-                                        <p>Rooms</p>
-                                    </a>
+                                        <p>All Venues</p>
+                                    </router-link>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <router-link to="/users" class="nav-link">
                                         <i class="fa fa-circle-o nav-icon"></i>
-                                        <p>Halls</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <router-link to="/dashboard" class="nav-link">
-                                        <i class="fa fa-circle-o nav-icon"></i>
-                                        <p>Projectors</p>
+                                        <p>Users</p>
                                     </router-link>
                                 </li>
                                 <li class="nav-item">
@@ -231,9 +225,9 @@
                                     </router-link>
                                 </li>
                                 <li class="nav-item">
-                                    <router-link to="/users" class="nav-link">
+                                    <router-link to="/developer" class="nav-link">
                                         <i class="fa fa-circle-o nav-icon"></i>
-                                        <p>Users</p>
+                                        <p>developer</p>
                                     </router-link>
                                 </li>
                             </ul>
@@ -259,7 +253,8 @@
             <!-- Main content -->
             <div class="content">
                 <div class="container-fluid">
-                   <router-view></router-view>
+                    <router-view></router-view>
+                    <vue-progress-bar></vue-progress-bar>
                 </div><!-- /.container-fluid -->
             </div>
             <!-- /.content -->

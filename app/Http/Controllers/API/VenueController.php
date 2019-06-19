@@ -1,16 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\API;
 
 use App\Venue;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class VenueController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth:api');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -18,18 +15,7 @@ class VenueController extends Controller
      */
     public function index()
     {
-        $venues = Venue::with('user')->latest()->paginate(5);
-        return view('venues.index', compact('venues'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return Venue::latest()->paginate(10);
     }
 
     /**
@@ -40,7 +26,20 @@ class VenueController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|string|max:255|unique:venues',
+            'description' => 'string|min:55',
+            'location' => 'string|min:6',
+            'capacity' => 'integer|min:6'
+        ]);
+        return Venue::create([
+            'name' => $request['name'],
+            'description' => $request['description'],
+            'location' => $request['location'],
+            'capacity' => $request['capacity'],
+            'status' => $request['status'],
+            'user_id' => 1
+        ]);
     }
 
     /**
@@ -50,17 +49,6 @@ class VenueController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Venue $venue)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Venue  $venue
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Venue $venue)
     {
         //
     }
@@ -85,6 +73,9 @@ class VenueController extends Controller
      */
     public function destroy(Venue $venue)
     {
-        //
+        $res = $venue->delete();
+        return response()->json([
+            'message' => $res ? 'Venue deleted successfully.' : 'Not so much'
+        ]);
     }
 }

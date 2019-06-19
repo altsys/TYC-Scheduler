@@ -15,7 +15,7 @@
 
 .navbar-laravel {
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
 }
 .navbar-nav {
     display: inline-flex;
@@ -23,5 +23,8 @@
 
 }
 .sidebar-dark-primary {
-    background-color: #e8f3ff !important;
+    background-color: #3b6899;
+}
+a.dropdown-item {
+    cursor: pointer;
 }

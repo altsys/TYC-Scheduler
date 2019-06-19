@@ -2,15 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Venue;
+use App\User;
 use Illuminate\Http\Request;
 
-class VenueController extends Controller
+class UserController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth:api');
-    }
     /**
      * Display a listing of the resource.
      *
@@ -18,8 +14,8 @@ class VenueController extends Controller
      */
     public function index()
     {
-        $venues = Venue::with('user')->latest()->paginate(5);
-        return view('venues.index', compact('venues'));
+        $users = User::latest()->paginate(5);
+        return view('users.index', compact('users'));
     }
 
     /**
@@ -46,10 +42,10 @@ class VenueController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Venue  $venue
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(Venue $venue)
+    public function show(User $user)
     {
         //
     }
@@ -57,10 +53,10 @@ class VenueController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Venue  $venue
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(Venue $venue)
+    public function edit(User $user)
     {
         //
     }
@@ -69,10 +65,10 @@ class VenueController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Venue  $venue
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Venue $venue)
+    public function update(Request $request, User $user)
     {
         //
     }
@@ -80,10 +76,10 @@ class VenueController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Venue  $venue
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Venue $venue)
+    public function destroy(User $user)
     {
         //
     }

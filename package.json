@@ -11,7 +11,7 @@
     },
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.8.1",
-        "axios": "^0.18.0",
+        "axios": "^0.18.1",
         "bootstrap": "^4.0.0",
         "cross-env": "^5.1",
         "jquery": "^3.2",
@@ -26,7 +26,13 @@
     },
     "dependencies": {
         "admin-lte": "^3.0.0-alpha.2",
-        "vform": "^1.0.0",
+        "moment": "^2.24.0",
+        "sweetalert": "^2.1.2",
+        "sweetalert2": "^8.11.7",
+        "v-calendar": "^1.0.0-beta.14",
+        "vform": "^1.0.1",
+        "vue-flash-message": "^0.7.2",
+        "vue-progressbar": "^0.7.5",
         "vue-router": "^3.0.6"
     }
 }

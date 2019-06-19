@@ -9046,7 +9046,7 @@ body,
 }
 
 .sidebar-dark-primary {
-  background-color: #343a40;
+  background-color: #3b6899;
 }
 
 .sidebar-dark-primary .user-panel a:hover {
@@ -29557,7 +29557,7 @@ readers do not read off random characters that represent icons */
 
 .navbar-laravel {
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
 }
 
 .navbar-nav {
@@ -29566,6 +29566,10 @@ readers do not read off random characters that represent icons */
 }
 
 .sidebar-dark-primary {
-  background-color: #e8f3ff !important;
+  background-color: #3b6899;
+}
+
+a.dropdown-item {
+  cursor: pointer;
 }
 

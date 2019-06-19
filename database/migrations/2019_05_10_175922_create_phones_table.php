@@ -19,6 +19,7 @@ class CreatePhonesTable extends Migration
             $table->integer('number')->unsigned();
             $table->integer('people_id')->unsigned();
             $table->foreign('people_id')->reference('id')->on('people')->onDelete('cascade');
+            
             $table->timestamps();
         });
     }
