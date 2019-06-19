@@ -39,11 +39,9 @@
 
 <script>
     export default {
+        props: ['types', 'frequencies', 'priorities'],
         data() {
             return {
-                types: ['Meeting', 'Conference', 'Lecture', 'Symposium', 'Speech'],
-                frequencies: ['One Time', 'Yearly', 'Quarterly', 'Monthly', 'Weekly', 'Daily'],
-                priorities: ['Low', 'Normal', 'High'],
                 ev: {},
                 form: new Form({
                     name: '',

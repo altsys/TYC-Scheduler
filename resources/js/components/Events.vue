@@ -12,7 +12,7 @@
                     <div class="card-body">
                         <div class="list-group">
                             <div class="list-group-item list-group-item-action">
-                                <eventform></eventform>
+                                <eventform :types='types' :frequencies='frequencies' :priorities='priorities'></eventform>
                             </div>
                             <event v-for="event in events" :event="event" :key="event.id"></event>
                         </div>
@@ -30,7 +30,10 @@
         data() {
             return {
                 events: {},
-                form: new Form({})
+                form: new Form({}),
+                types: ['Meeting', 'Conference', 'Lecture', 'Symposium', 'Speech'],
+                frequencies: ['One Time', 'Yearly', 'Quarterly', 'Monthly', 'Weekly', 'Daily'],
+                priorities: ['Low', 'Normal', 'High'],
             }
         },
         methods: {

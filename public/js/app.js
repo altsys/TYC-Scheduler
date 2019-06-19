@@ -1840,11 +1840,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['types', 'frequencies', 'priorities'],
   data: function data() {
     return {
-      types: ['Meeting', 'Conference', 'Lecture', 'Symposium', 'Speech'],
-      frequencies: ['One Time', 'Yearly', 'Quarterly', 'Monthly', 'Weekly', 'Daily'],
-      priorities: ['Low', 'Normal', 'High'],
       ev: {},
       form: new Form({
         name: '',
@@ -1928,7 +1926,10 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       events: {},
-      form: new Form({})
+      form: new Form({}),
+      types: ['Meeting', 'Conference', 'Lecture', 'Symposium', 'Speech'],
+      frequencies: ['One Time', 'Yearly', 'Quarterly', 'Monthly', 'Weekly', 'Daily'],
+      priorities: ['Low', 'Normal', 'High']
     };
   },
   methods: {
@@ -61186,7 +61187,15 @@ var render = function() {
                 _c(
                   "div",
                   { staticClass: "list-group-item list-group-item-action" },
-                  [_c("eventform")],
+                  [
+                    _c("eventform", {
+                      attrs: {
+                        types: _vm.types,
+                        frequencies: _vm.frequencies,
+                        priorities: _vm.priorities
+                      }
+                    })
+                  ],
                   1
                 ),
                 _vm._v(" "),
